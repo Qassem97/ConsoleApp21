@@ -29,6 +29,13 @@ namespace ConsoleApp9
                         case 4:
                             RunExerciseFour();
                             break;
+                        case 5:
+                            RunExercisefive();
+                            break;
+                        case 6:
+                            RunExerciseSix();
+                            break;
+                            
                         case -1:
                             keepAlive = false;
                             break;
@@ -51,7 +58,7 @@ namespace ConsoleApp9
 
                 }
             }
-        }
+        }//end main
 
 
 
@@ -88,30 +95,48 @@ namespace ConsoleApp9
                                                               //cod
 
             string modefied1 = "";
-            modefied1 = str.Insert(30, "lazy ");
+            modefied1 = str.Replace("quick", "brown");
             Console.WriteLine(modefied1);
-        
 
             string modefied2 = "";
-            modefied2 = str.Replace("quick", "brown");
-            Console.WriteLine(modefied2);
-        
+            modefied2 = modefied1.Insert(30, "lazy ");
+            Console.WriteLine(modefied2);    
 
-            string modefied3 = "t";
-            modefied3 = str.Remove(0);
+            string modefied3 = "";
+            modefied3 = modefied2.ToLower();
             Console.WriteLine(modefied3);
 
             string modefied4 = "";
-            modefied4 = str.ToLower();
+            modefied4 = modefied3.Remove(0, 1);
             Console.WriteLine(modefied4);
 
             string modefied5 = "";
-            modefied5 = str.Replace("the", "The");
+            modefied5 = modefied4.Insert(0, "T");
             Console.WriteLine(modefied5);
 
 
+        }// end of Ex4
+
+        static void RunExercisefive()
+        {
+            string str1 = "Arrays are very common in programming, they look something like: [1,2,3,4,5]"; //the result is [1, 4, 5, 6, 7, 8, 9, 10]
+
+            int indexStart = str1.IndexOf('['); // ' = char
+            string indexOf = str1.Substring(indexStart);
+            Console.WriteLine(indexStart);
+
+            //int indexEnd = str1.IndexOf(']');
+            //string removeNums = num2.Remove(3, 4);
+
+            //string removeNumbers = indexEnd.Remove(3, 4);
+            //string addNumbers = removeNumbers.Insert(6, "6, 7, 8, 9, 10");
+            //Console.WriteLine(indexStart);
 
 
-        }// end of Main
+        }
+        static void RunExerciseSix()
+        {
+
+        }
     }// end of class
 }// end of namespace
